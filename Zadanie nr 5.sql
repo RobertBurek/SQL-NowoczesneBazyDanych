@@ -6,7 +6,7 @@ memo_id SERIAL,
 tytul VARCHAR(150) NOT NULL,
 wpis TEXT NOT NULL,
 termin DATETIME NOT NULL,
-dodanie timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+dodanie TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 INSERT INTO memo(tytul, wpis, termin) VALUES ('Urodziny Babci', 'Kupić kwiatki oraz torcik Wedlowski', '2019-06-17 16:00:00');
